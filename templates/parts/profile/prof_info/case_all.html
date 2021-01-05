@@ -1,0 +1,14 @@
+{% extends 'parts/profile/prof_info.html' %}
+
+{% block info_user %}
+<div class="row text-center justify-content-center">
+    {% for case in cases %}
+    <div class="col-xs-12 col-sm-4 col-lg-2">
+        <a href="{% url 'case' case.case_id %}">
+            <img class="w-50" src="{{ case.image.url }}" alt="">
+        </a>
+        <h3>{{ case.name }}</h3>
+    </div>
+    {% endfor %}
+</div>
+{% endblock info_user %}

@@ -1,0 +1,12 @@
+{% extends 'parts/profile/prof_info/weapon_all.html' %}
+
+{% block weapon %}
+<div class="wep_view">
+    <img class="w-50" src="{{ weapon.image.url }}" alt="">
+    <h3>{{ weapon.name }}</h3>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" name="sell" value="Продать за {{weapon.price}}">
+    </form>
+</div>
+{% endblock weapon %}

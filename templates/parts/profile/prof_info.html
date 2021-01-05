@@ -1,0 +1,14 @@
+{% extends 'account/profile.html' %}
+
+{% block form %}
+<div>
+    Status: {{ user.profile.status }}
+</div></br>
+<div>Баланас: {{ user.profile.balance }}</div>
+<div class="prof_section">
+    <a href="{% url 'profile_weapon' %}"><h1>Выбитые оружия</h1></a>
+    <a href="{% url 'profile' %}"><h1>Купленные кейсы</h1></a>
+</div></br>
+{% block info_user %}
+{% endblock info_user %}
+{% endblock form %}

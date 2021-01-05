@@ -1,0 +1,67 @@
+{% load static %}
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <a href="{% url 'index' %}" class="navbar-brand">
+            <img src="{% static 'image/csdrop.jpg' %}" height="70px" width="240px" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportContent"
+            aria-controls="navbarSupportContent" aria-expended="false" aria-label="Toogle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportContent">
+            <ul class="navbar-nav mr">
+                <li class="nav-item ">
+                    <a href="#" class="nav-link hed-teg">FQA</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link hed-teg">Апгрейд</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link hed-teg">Контракты</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link hed-teg">Снаряжение</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li class="nav-item register">
+                    <a href="{% url 'profile' %}" class="nav-link ml-5">{{ user.username }}</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'balance' %}" class="nav-link ml-5">
+                        Ваш баланс: {{ user.profile.balance }}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'logout' %}" class="nav-link btn-danger ml-5">Выход</a>
+                </li>
+                {% else %}
+                <li class="nav-item register">
+                    <a href="{% url 'login' %}" class="nav-link hed-teg">Войти</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'social:begin' 'vk-oauth2' %}" class="nav-link hed-teg">Войти черех VK</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'register' %}" class="nav-link hed-teg">Регистрация</a>
+                </li>
+                {% endif %}
+        </div>
+        </ul>
+
+    </nav>
+    <div class="under-nav">
+        <div class="bonus">Бонусы</div>
+        <div class="sound">Звук</div>
+        <div class="ssilk">Vk,Inst</div>
+        <div class="case">Открыто кейсов
+            <p>100</p>
+        </div>
+        <div class="users">ПОльзователей:
+            <p>4</p>
+        </div>
+        <div class="online">Онлайн
+            <p>30</p>
+        </div>
+    </div>
+    <!-- <div class="block-weapon"></div> Это потом сделаешь ну как-то -->
+</header>

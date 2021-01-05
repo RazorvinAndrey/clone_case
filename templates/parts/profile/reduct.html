@@ -1,0 +1,9 @@
+{% extends 'account/profile.html' %}
+
+{% block form %}
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="status" value="{{ user.profile.status }}">
+    <input type="submit" value = "Обновить статус">
+</form>
+{% endblock form %}

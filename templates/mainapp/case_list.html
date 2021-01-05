@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+   <div class="container-fluid">
+      <div class="block_case">
+         <h2 class="case_name">{{ current_case.name }}</h2>
+         <img class="weapon_win" src="{{ weapon_win.image.url }}">
+         <img class="case_view" src="{{ current_case.image.url }}">
+         <div class="case_nope">
+            {% if error %}
+            <div style="color: #f80000;">На вашем счету недостаточно средств</div>
+            {% endif %}
+            {% if user.is_authenticated %}
+            <form method="post">
+               {% csrf_token %}
+               <input type="submit" name="buy" value="Купить за {{ current_case.price }}" }}>
+            </form>
+            {% else %}
+            <div style="color: #f80000;">Вам необходимо авторизоваться</div>
+            {% endif %}
+         </div>
+      </div>
+      <div class="row text-center justify-content-center weapon">
+         {% for gun in current_case.weapon.all %}
+         <div class="col-xs-12 col-sm-4 col-lg-2 gun {{ gun.rarity.name }}">
+            <img src="{{ gun.image.url }}" alt="">
+            <h3 style="position: absolute;">{{ gun.name }}</h3>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+</div>
+{% endblock content %}

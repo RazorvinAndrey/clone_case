@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="line_weapon">
+	{% for wep in weapline %}
+	<div class="wep_line_view {{ wep.rarity }}">
+		<img src="{{ wep.image.url }}">
+	</div>
+	{% endfor %}
+</div>
+<div class="container-case">
+	<div class="section_titl">Все наши кейсы
+		<p>Получи возможность выиграть нихуя</p>
+	</div>
+	<div class="row text-center justify-content-center">
+		{% for c in case %}
+		<div>
+			<a href="{% url 'case' c.pk %}" style="text-decoration: none; color: white;">
+				<div class="col-xs-12 col-sm-4 col-lg-2 case_main_view box">
+					<img class="case_image_view" src="{{ c.image.url }}" alt="">
+					<div>{{ c.name }}</div>
+				</div>
+			</a>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+{% endblock content %}

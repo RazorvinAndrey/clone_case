@@ -1,0 +1,16 @@
+{% extends 'parts/profile/prof_info.html' %}
+
+{% block info_user %}
+<div class="row text-center justify-content-center">
+    {% block weapon %}
+    {% endblock weapon %}
+    {% for weapon in weapons %}
+    <div class="col-xs-12 col-sm-4 col-lg-2 {{ weapon.rarity }} ">
+        <a href="{% url 'sell_weapon' weapon.pk %}">
+            <img class="w-50" src="{{ weapon.image.url }}" alt="">
+            <h3>{{ weapon.name }}</h3>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock info_user %}

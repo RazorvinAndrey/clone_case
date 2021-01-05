@@ -1,0 +1,240 @@
+body {
+	background-color: #24252d;
+	color: aliceblue;
+}
+
+.register{
+	margin-left: 510px;
+}
+	
+/* После навбара */
+
+
+.under-nav {
+	text-align: center;
+	vertical-align: auto;
+	height: 30px;
+	background-color: #292931;
+	display: flex;
+}
+
+.bonus{
+	width: 300px;
+}
+
+.sound{
+	width: 150px;
+}
+
+.ssilk{
+	width: 70px;
+}
+
+.case{
+	margin-left: 500px;
+	width: 150px;
+}
+
+.users{
+	width: 150px;
+}
+
+.online{
+	width: 150px;
+}
+
+/* Главная страница со всеми кейсами */
+.container-case{
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.new-block{
+	margin-top: 100px;
+}
+
+.section_titl {
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: 800;	
+	text-align: center ;
+	color: white;
+}
+
+.section_titl:after {
+	content: "" ;
+	display: block;
+	width: 100%;
+	height: 3px;
+	margin: 40px auto 50px;
+	background-color: red;
+}
+
+.section_titl p{
+	color: #8e8e99;
+	font-size: 12px;
+}
+
+.box {
+	align-self: flex-end;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	height: 200px;
+	margin: 0 auto 0 auto;
+	transform-origin: bottom;
+	width: 200px;
+	text-align: center;
+}
+
+@keyframes case_main_view {
+	0%   { transform: scale(1,1)      translateY(0); }
+	10%  { transform: scale(1.1,.9)   translateY(0); }
+	30%  { transform: scale(.9,1.1)   translateY(-100px); }
+	50%  { transform: scale(1.05,.95) translateY(0); }
+	57%  { transform: scale(1,1)      translateY(-7px); }
+	64%  { transform: scale(1,1)      translateY(0); }
+	100% { transform: scale(1,1)      translateY(0); }
+}
+
+.case_main_view:hover{
+	color: orange;
+	transform: translate(0,-10px);
+	transition: all 1s none;
+	animation-name: case_main_view;
+	animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+
+.case_image_view{
+	width: 190px;
+}
+
+.line_weapon{
+	display: flex;
+}
+
+.wep_line_view{
+	width: 170px;
+	height: 120px;
+	border: palegreen solid 2px;
+	text-align: center;
+}
+
+.wep_line_view img{
+	width: 110px;
+}
+
+/* блок страницы с кейсом */
+
+.block_case{
+	text-align: center;
+}
+
+.case_name{
+	margin-top: 60px;
+	color: blue;
+}
+
+.case_name:after {
+	content: "" ;
+	display: block;
+	width: 100%;
+	height: 4px;
+	margin: 5px auto 5px;
+	background-color: red;
+}
+
+.case_view{
+	margin-top: 30px;
+	width: 330px;
+}
+
+.weapon_win{
+	margin-top: 110px;
+	margin-left: 60px;
+	width: 200px;
+	position: absolute;
+	/* display: none; */
+}
+
+.weapon{
+	margin-top: 130px;
+}
+
+.case_nope{
+	/* width: 250px; */
+	/* height: 80px; */
+	/* background-color: red; */
+	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.gun{
+	width: 230px;
+	height: 150px;
+	border: red solid 2px;
+	margin: auto;
+}
+
+.gun img{
+	width: 130px;
+}
+
+
+.gavno{
+	background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(243, 242, 243), rgb(231, 229, 231), rgb(219, 216, 220), rgb(207, 203, 208), rgb(195, 190, 196), rgb(182, 177, 184), rgb(170, 164, 172), rgb(158, 151, 160), rgb(146, 138, 149), rgb(134, 125, 137), rgb(122, 112, 125));
+}
+
+.normal{
+	background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(232, 235, 253), rgb(210, 216, 250), rgb(187, 196, 248), rgb(164, 176, 246), rgb(141, 156, 244), rgb(119, 137, 241), rgb(96, 117, 239), rgb(73, 97, 237), rgb(50, 77, 235), rgb(28, 58, 232), rgb(5, 38, 230));
+}
+
+.beautiful{
+	background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(249, 232, 255), rgb(243, 209, 255), rgb(236, 185, 255), rgb(230, 162, 255), rgb(224, 139, 255), rgb(218, 116, 255), rgb(212, 93, 255), rgb(206, 70, 255), rgb(199, 46, 255), rgb(193, 23, 255), rgb(187, 0, 255));
+}
+
+.wonderfull{
+	background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 232, 232), rgb(255, 209, 209), rgb(255, 185, 185), rgb(255, 162, 162), rgb(255, 139, 139), rgb(255, 116, 116), rgb(255, 93, 93), rgb(255, 70, 70), rgb(255, 46, 46), rgb(255, 23, 23), rgb(255, 0, 0));
+}
+
+/* Блок логин */
+
+.login{
+	width: 400px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* Профиль пользователя  */
+
+.prof_section{
+	width: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.prof_section a{
+	text-decoration: none;
+	color: #8e8e99;
+}
+
+.prof_section a:hover{
+	color: orange;
+}
+
+
+.sell_in{
+	display: none;
+}
+
+/* блок с оружием */
+
+.wep_view{
+	position: absolute;
+	margin-bottom: 100px;
+}
